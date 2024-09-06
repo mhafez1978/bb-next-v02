@@ -1,10 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/latest-news/page": "app/latest-news/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/portfolio/page": "app/portfolio/page.js",
   "/services/page": "app/services/page.js",
-  "/page": "app/page.js"
+  "/about/page": "app/about/page.js",
+  "/latest-news/page": "app/latest-news/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

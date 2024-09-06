@@ -21,42 +21,42 @@ const Services = () => {
         <div className=" flex flex-wrap justify-center">
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-01.jpg"
-            title="Logo Design"
+            image="https://img.freepik.com/free-photo/online-marketing-branding-concept-laptop-screen_53876-94880.jpg"
+            title="Identity Re-Branding"
             details="Professional logo design builds brand identity, attracts customers, and boosts business credibility and recognition."
             button="View Details"
           />
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-02.jpg"
+            image="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg"
             title="Website Design"
             details="Effective web design improves user experience, enhances brand presence, and drives business growth."
             button="View Details"
           />
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-03.jpg"
+            image="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg"
             title="WordPress Development"
             details="Custom WordPress sites provide tailored design and functionality, and SEO friendly option for startups and small business."
             button="View Details"
           />
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-01.jpg"
+            image="https://img.freepik.com/free-photo/sale-discount-promotion-special-offer-graphic-concept_53876-120872.jpg"
             title="Online Stores"
             details="Online stores increase sales, reach global customers, provide 24/7 shopping, and enhance business growth opportunities."
             button="View Details"
           />
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-02.jpg"
+            image="https://img.freepik.com/free-photo/young-people-using-reels_23-2150038634.jpg"
             title="Social Media Management"
             details="Social media management boosts brand visibility, engages audiences, drives traffic, and enhances business credibility."
             button="View Details"
           />
           <ServiceCard
             link="/#"
-            image="https://cdn.tailgrids.com/2.0/image/marketing/images/services/services-06/image-03.jpg"
+            image="https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063140.jpg"
             title="Online Marketing"
             details="Online marketing increases website traffic, improves SEO rankings, and enhances brand awareness effectively."
             button="View Details"
@@ -86,7 +86,13 @@ const ServiceCard = ({
     <div className="w-full h-full px-4 md:w-1/2 lg:w-1/3">
       <div className="mb-10 bg-white dark:bg-dark-2">
         <a href={link} className="block w-full">
-          <img src={image} alt="image" className="w-full" />
+          <img
+            src={image}
+            alt="image"
+            className="w-full"
+            width="200"
+            height="200"
+          />
         </a>
         <div className="p-8 sm:p-11 md:p-8 lg:px-6 xl:p-10 2xl:p-11">
           <h3>
