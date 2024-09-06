@@ -91,7 +91,7 @@ const Marketing: React.FC<{}> = () => {
                   </div>
                   <div className="relative bg-sky-300/80 z-10 mb-4 flex items-center justify-center overflow-hidden py-12 px-6 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
-                      <span className="absolute -mt-[1vh] left-40 block text-4xl font-extrabold text-black">
+                      <span className="absolute -mt-[1vh] left-40 block text-4xl font-extrabold text-black ml-4">
                         09
                       </span>
                       <span className="block text-base font-semibold text-black">

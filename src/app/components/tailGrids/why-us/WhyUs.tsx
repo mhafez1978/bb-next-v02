@@ -2,19 +2,23 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <section className="pb-12 pt-20 dark:bg-dark h-[100vh] flex flex-col justify-center items-center lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-[70px]">
               <span className="mb-2 block text-lg font-semibold text-primary">
-                Why Choose Us ?
+                How do we do it ?
               </span>
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                Our Offer Core Values
+                Business Essentials
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
-                We listen and deliver on our promises.
+                Blooming Brands team gets to know your business, products,
+                services, and ideal customers. Then our experts will create a
+                data driven full stack web funnel that drives traffic to your
+                website to contact you about your offering. its up to you at
+                that point to convert this into a customer.
               </p>
             </div>
           </div>

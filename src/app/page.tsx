@@ -18,9 +18,8 @@ const HomePage = () => {
       <Hero />
       <Marketing />
       <Services />
-      {/* <WhyUs /> */}
+      <WhyUs />
       <Portfolio />
-
       <C2A />
     </>
   );

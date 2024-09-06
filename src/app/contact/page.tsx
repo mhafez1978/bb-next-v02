@@ -1,7 +1,6 @@
-import React from "react";
-
+import Contact from "../components/tailGrids/contact-us/Contact";
 const ContactPage: React.FC<{}> = () => {
-  return <div className="h-[100vh] pt-[64px]">ContactPage</div>;
+  return <Contact />;
 };
 
 export default ContactPage;

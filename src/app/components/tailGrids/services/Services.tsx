@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="bg-[#090E34] h-[100vh] pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <section className="bg-[#090E34] min-h-[100vh] pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 mb-10 flex flex-wrap items-end lg:mb-[70px]">
           <div className="w-full px-4 lg:w-8/12">
