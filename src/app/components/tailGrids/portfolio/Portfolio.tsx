@@ -3,18 +3,25 @@
 import React, { useCallback, useRef } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Swiper as SwiperInstance } from "swiper";
+
+// Optional: Initialize Swiper modules if needed
+// SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio: React.FC<{}> = () => {
-  const sliderRef = useRef(null);
+  // Use the correct type for sliderRef
+  const sliderRef = useRef<SwiperInstance | null>(null);
 
   const handlePrev = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slidePrev();
+    if (sliderRef.current) {
+      sliderRef.current.slidePrev();
+    }
   }, []);
 
   const handleNext = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slideNext();
+    if (sliderRef.current) {
+      sliderRef.current.slideNext();
+    }
   }, []);
 
   return (
@@ -24,7 +31,13 @@ const Portfolio: React.FC<{}> = () => {
         className="flex flex-col justify-center items-center w-[100vw] h-[100vh] overflow-hidden py-20"
       >
         <div className="relative container h-[60vh] mx-auto">
-          <Swiper slidesPerView={1} ref={sliderRef}>
+          <Swiper
+            slidesPerView={1}
+            onSwiper={(swiper) => {
+              // Update the ref with the Swiper instance
+              sliderRef.current = swiper;
+            }}
+          >
             <SwiperSlide>
               <PortfolioCard
                 subtitle="Astro JS"

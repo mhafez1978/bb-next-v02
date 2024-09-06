@@ -133,7 +133,7 @@ const WhyUs = () => {
 
 export default WhyUs;
 
-const ServiceCard = ({ icon, title, details }) => {
+const ServiceCard = ({ icon, title, details }: any) => {
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-5/12">
       <div className="mb-8 flex md:block lg:mb-[70px] lg:flex 2xl:px-4">

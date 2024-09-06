@@ -41,7 +41,13 @@ export default function Brands() {
           <div className="w-full px-4">
             <div className="flex flex-wrap items-center justify-center">
               {brandsData.map((brand, i) => (
-                <SingleImage key={i} brand={brand} />
+                <SingleImage
+                  key={i}
+                  link={brand.link}
+                  imageSrc={brand.imageSrc}
+                  lightImageSrc={brand.lightImageSrc}
+                  altText={brand.altText}
+                />
               ))}
             </div>
           </div>
@@ -51,19 +57,28 @@ export default function Brands() {
   );
 }
 
-const SingleImage = ({ brand }) => {
-  const { link, imageSrc, lightImageSrc, altText } = brand;
+const SingleImage = ({
+  link,
+  imageSrc,
+  lightImageSrc,
+  altText,
+}: {
+  link: string;
+  imageSrc: string;
+  lightImageSrc: string;
+  altText: string;
+}) => {
   return (
     <>
       <a
         href={link}
-        class="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
+        className="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
       >
-        <img src={imageSrc} alt={altText} class="h-10 w-full dark:hidden" />
+        <img src={imageSrc} alt={altText} className="h-10 w-full dark:hidden" />
         <img
-          src={{ lightImageSrc }}
+          src={lightImageSrc}
           alt={altText}
-          class="hidden h-10 w-full dark:block"
+          className="hidden h-10 w-full dark:block"
         />
       </a>
     </>
