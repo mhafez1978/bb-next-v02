@@ -1,109 +1,22 @@
 import React from "react";
 
-const Services = () => {
+const ServiceCard = ({ link, image, button, title, details }: any) => {
   return (
-    <section className="bg-[#090E34] min-h-[100vh] pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
-      <div className="container mx-auto">
-        <div className="-mx-4 mb-10 flex flex-wrap items-end lg:mb-[70px]">
-          <div className="w-full px-4 lg:w-8/12">
-            <div className="mb-5 max-w-[625px]">
-              <h2 className="text-2xl mb-8 font-bold text-white sm:text-4xl md:text-[40px]">
-                Our Services
-              </h2>
-              <p className="text-white ">
-                We help your business get new customers through data driven apps
-                and online marketing strategies.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className=" flex flex-wrap justify-center">
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/online-marketing-branding-concept-laptop-screen_53876-94880.jpg"
-            title="Identity Re-Branding"
-            details="Professional logo design builds brand identity, attracts customers, and boosts business credibility and recognition."
-            button="View Details"
-          />
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg"
-            title="Website Design"
-            details="Effective web design improves user experience, enhances brand presence, and drives business growth."
-            button="View Details"
-          />
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg"
-            title="WordPress Development"
-            details="Custom WordPress sites provide tailored design and functionality, and SEO friendly option for startups and small business."
-            button="View Details"
-          />
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/sale-discount-promotion-special-offer-graphic-concept_53876-120872.jpg"
-            title="Online Stores"
-            details="Online stores increase sales, reach global customers, provide 24/7 shopping, and enhance business growth opportunities."
-            button="View Details"
-          />
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/young-people-using-reels_23-2150038634.jpg"
-            title="Social Media Management"
-            details="Social media management boosts brand visibility, engages audiences, drives traffic, and enhances business credibility."
-            button="View Details"
-          />
-          <ServiceCard
-            link="/#"
-            image="https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063140.jpg"
-            title="Online Marketing"
-            details="Online marketing increases website traffic, improves SEO rankings, and enhances brand awareness effectively."
-            button="View Details"
-          />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;
-
-const ServiceCard = ({
-  link,
-  image,
-  button,
-  title,
-  details,
-}: {
-  link: string;
-  image: string;
-  button: string;
-  title: string;
-  details: string;
-}) => {
-  return (
-    <div className="w-full h-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-10 bg-white dark:bg-dark-2">
-        <a href={link} className="block w-full">
-          <img
-            src={image}
-            alt="image"
-            className="w-full"
-            width="200"
-            height="200"
-          />
+    <div className="w-full px-4 md:w-1/2 lg:w-1/3 flex">
+      <div className="bg-white dark:bg-dark-2 rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+        <a href={link} className="block w-full flex-shrink-0">
+          <img src={image} alt="service" className="w-full h-64 object-cover" />
         </a>
-        <div className="p-8 sm:p-11 md:p-8 lg:px-6 xl:p-10 2xl:p-11">
-          <h3>
+        <div className="p-8 flex-1 flex flex-col">
+          <h3 className="mb-4">
             <a
               href={link}
-              className="mb-4 block text-lg font-bold text-dark hover:text-primary dark:text-white sm:text-[22px] sm:leading-[35px]"
+              className="block text-lg font-bold text-dark hover:text-primary dark:text-white sm:text-[22px] sm:leading-[35px]"
             >
               {title}
             </a>
           </h3>
-          <p className="mb-8 border-b border-stroke pb-8 text-base text-body-color dark:border-dark-3 dark:text-dark-6">
+          <p className="mb-8 border-b border-stroke pb-8 text-base text-body-color dark:border-dark-3 dark:text-dark-6 flex-1">
             {details}
           </p>
           <a
@@ -132,3 +45,76 @@ const ServiceCard = ({
     </div>
   );
 };
+
+const Services = () => {
+  return (
+    <section className="bg-[#090E34] pb-12 pt-20 dark:bg-dark lg:pb-[200px] lg:pt-[160px]">
+      <div className="container mx-auto">
+        <div className="-mx-4 mb-10 flex flex-wrap items-end lg:mb-[70px]">
+          <div className="w-full px-4 lg:w-8/12">
+            <div className="mb-5 max-w-[625px]">
+              <span className="mb-2 block text-2xl font-semibold text-white">
+                Our Services
+              </span>
+              <h2 className="text-4xl font-bold leading-[1.2] text-white sm:text-4xl md:text-[40px]">
+                Are Geared To Help <br />
+                Promote Your Business Growth.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col gap-8">
+          <div className="w-full flex flex-row justify-center items-center gap-2">
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg"
+              title="Web Design & Development"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/map-lying-wooden-table_53876-65112.jpg"
+              title="Search Engine Optimization (SEO)"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/design-software-resize-icon-concept_53876-132194.jpg"
+              title="Digital Marketing Strategy"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+          </div>
+          <div className="w-full flex flex-row justify-center items-center gap-2">
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg"
+              title="Content Creation and Marketing"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/map-lying-wooden-table_53876-65112.jpg"
+              title="Pay-Per-Click (PPC) Advertising"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+            <ServiceCard
+              link="/#"
+              image="https://img.freepik.com/free-photo/design-software-resize-icon-concept_53876-132194.jpg"
+              title="Social Media Management"
+              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              button="View Details"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

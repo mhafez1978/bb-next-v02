@@ -1,7 +1,7 @@
-import RecentPosts from "@/app/components/tailGrids/blog-posts/RecentPosts";
+import BlogRoll from "@/app/components/tailGrids/all-blog-posts/BlogRoll";
 
 const LatestNewsPage: React.FC<{}> = () => {
-  return <RecentPosts />;
+  return <BlogRoll />;
 };
 
 export default LatestNewsPage;

@@ -8,6 +8,118 @@ import SwiperCore, { Swiper as SwiperInstance } from "swiper";
 // Optional: Initialize Swiper modules if needed
 // SwiperCore.use([Navigation, Pagination]);
 
+export function Action_List() {
+  return (
+    <>
+      <ul className="list-disc text-sm pl-4">
+        <li>
+          Website Design & Development: We designed and built a user-friendly,
+          mobile-optimized website that highlighted PWWL&apos;s luxurious
+          services and made it easy for visitors to book rides.
+        </li>
+        <li>
+          Paid Ads: We launched targeted paid ad campaigns on Google, focused on
+          capturing local search traffic for terms like “limousine services for
+          weddings” and “corporate event transportation in Denver, NC.”
+        </li>
+        <li>
+          Search Engine Optimization (SEO): By optimizing the website with
+          high-ranking keywords and improving local SEO, we boosted organic
+          traffic and increased PWWL&apos;s visibility in search engines.
+        </li>
+        <li>
+          Social Media Ads: We ran targeted social media ads on platforms like
+          Facebook and Instagram, showcasing PWWL&apos;s fleet and services.
+          These ads focused on attracting wedding planners and corporate event
+          organizers.
+        </li>
+      </ul>
+    </>
+  );
+}
+
+export function ResultsList({ results }: { results: string[] }) {
+  return (
+    <ul className="list-disc text-sm pl-4">
+      {results.map((result, index) => (
+        <li key={index}>{result}</li>
+      ))}
+    </ul>
+  );
+}
+
+const PortfolioCard = ({
+  subtitle,
+  title,
+  category,
+  details,
+  date,
+  image,
+  client,
+  industry,
+  location,
+  focus,
+  overview,
+  challenges,
+  our_solution,
+  results,
+  dynamicResults,
+  conclusion,
+}: any) => {
+  return (
+    <div className="flex flex-row">
+      <div className="flex flex-col w-1/2 h-full justify-evenly items-start px-6 py-4 pt-[38px]">
+        <h2 className="text-xl text-gray-800 mb-3">
+          <span className="font-black">Case Study: </span> {title}
+        </h2>
+        <h5 className="text-lg font-medium text-gray-700">
+          <span className="font-black">Client:</span> {client}
+        </h5>
+        <p className="text-sm text-gray-600 mt-1">
+          <span className="font-black">Location:</span> {location}
+        </p>
+        <p className="text-sm font-light text-gray-600">
+          <span className="font-black">Industry:</span> {industry}
+        </p>
+        <p className="text-sm font-light text-gray-600">
+          <span className="font-black">Focus:</span> {focus}
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          <span className="font-black">Overview:</span> <br />
+          {overview}
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          <span className="font-black">Challenges:</span> <br /> {challenges}
+        </p>
+        <p className="text-sm text-gray-600 mt-2 w-[80%]">
+          <span className="font-black">Our Solution:</span>
+          <br />
+          {our_solution}
+        </p>
+        {Action_List()}
+        <p className="text-sm text-gray-600 mt-2">
+          <span className="font-black">Results:</span>
+          <br /> {results}
+        </p>
+        <ResultsList results={dynamicResults} />
+        <p className="text-sm text-gray-600 mt-2 mb-4">
+          <span className="font-black">Conclusion:</span> <br />
+          {conclusion}
+        </p>
+      </div>
+      <div className="flex flex-col w-1/2 h-[60vh] justify-center items-center bg-gray-100">
+        <div className="w-full h-full p-4 flex justify-start items-start py-4 px-4">
+          <img
+            src={image}
+            alt="image"
+            className="max-w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Portfolio: React.FC<{}> = () => {
   // Use the correct type for sliderRef
   const sliderRef = useRef<SwiperInstance | null>(null);
@@ -28,9 +140,9 @@ const Portfolio: React.FC<{}> = () => {
     <>
       <section
         id="portfolio"
-        className="flex flex-col justify-center items-center w-[100vw] h-[100vh] overflow-hidden py-20"
+        className="flex flex-col justify-center items-center w-[100vw] min-h-[100vh] overflow-hidden py-24"
       >
-        <div className="relative container h-[60vh] mx-auto">
+        <div className="relative container  mx-auto">
           <Swiper
             slidesPerView={1}
             onSwiper={(swiper) => {
@@ -41,21 +153,49 @@ const Portfolio: React.FC<{}> = () => {
             <SwiperSlide>
               <PortfolioCard
                 subtitle="Astro JS"
-                title="Prestige Worldwide Limos"
+                title="PWWL - Driving Success for a Limousine Startup"
                 category="Transportation Services"
                 details="PWWL A startup limousie company based in Denver NC focused on providing luxurious transportation services for wedding groups corporate events"
                 date="06, September 2021"
                 image="pwwl.png"
+                client="PWWL (Premier Wedding and Event Limousine)"
+                industry="Luxury Transportation Services"
+                location="Denver, NC"
+                focus="Weddings, Wine Tours, Group Concdrt and Sports Events, Corporate Events"
+                overview="PWWL, a startup limousine company based in Denver, NC, approached Blooming Brands with a clear goal: to increase scheduled limousine rides for wedding groups and corporate events. Their premium transportation services needed a strong online presence to match their luxurious offerings, and they wanted a solution that would drive bookings and establish them as a go-to option in the region."
+                challenges="The main challenge was the highly competitive nature of the luxury transportation market, particularly for wedding and corporate events. PWWL needed to stand out from other providers and capture the attention of potential clients through online channels. They were looking for a digital strategy that could quickly generate leads and convert them into bookings."
+                our_solution="Blooming Brands took a multi-faceted approach to achieve PWWL’s goal of increasing limousine bookings:"
+                results="Within the first few months, PWWL saw a significant increase in online traffic and bookings:"
+                dynamicResults={[
+                  "50% increase in website traffic",
+                  "30% boost in limousine bookings within 3 months",
+                  "Top rankings for 'wedding limousine services Denver NC'",
+                ]}
+                conclusion="By creating a strong online presence and driving targeted traffic to PWWL’s website, Blooming Brands helped this luxury transportation startup achieve its primary business goal: more bookings. Our combination of paid ads, SEO, and social media marketing effectively positioned PWWL as a leader in the local market for limousine services."
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioCard
-                subtitle="Astro JS"
-                title="Being Mohamed Hafez"
-                category="Transportation Services"
-                details="Mohamed Hafez is a founder of 2 successful businesses focused on serving the local community fresh technology."
-                date="06, September 2021"
-                image="portfolio.png"
+                subtitle="Custom WordPress"
+                title="Carolina Recycles - Optimizing Waste Management Services"
+                category="Waste Management"
+                details="Carolina Recycles, a waste management company based in Charlotte, NC, focuses on providing eco-friendly recycling and waste solutions to residential and commercial customers."
+                date="15, October 2021"
+                image="carolina-recycles.png"
+                client="Carolina Recycles"
+                industry="Waste Management Services"
+                location="Charlotte, NC"
+                focus="Eco-friendly Recycling, Waste Solutions for Residential and Commercial Customers"
+                overview="Carolina Recycles, a waste management company in Charlotte, NC, came to Blooming Brands with the goal of expanding their digital presence and attracting more clients for their eco-friendly recycling services. They wanted a website and online strategy that would highlight their environmental focus and increase service bookings."
+                challenges="Carolina Recycles needed to differentiate themselves in a competitive waste management market. The challenge was to build a modern digital presence that emphasizes their eco-friendly services and resonates with environmentally-conscious consumers."
+                our_solution="Blooming Brands implemented a tailored strategy, starting with a mobile-friendly website showcasing their services and commitment to sustainability. We employed SEO tactics to rank them for relevant local search terms and ran targeted Google Ads to drive traffic. A content strategy was put in place to educate potential clients on waste management and recycling best practices."
+                results="Within the first quarter, Carolina Recycles experienced a 45% increase in online inquiries and a significant boost in local search rankings. This resulted in higher booking rates for their residential and commercial waste management services."
+                dynamicResults={[
+                  "33% increase in website traffic",
+                  "28% boost in limousine bookings within 3 months",
+                  "Top rankings for 'wedding limousine services Denver NC'",
+                ]}
+                conclusion="By developing a strong online presence with SEO and paid advertising strategies, Blooming Brands helped Carolina Recycles position itself as a leading eco-friendly waste management company in Charlotte, driving increased service bookings and client engagement."
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -66,20 +206,48 @@ const Portfolio: React.FC<{}> = () => {
                 details="Play is free startup, saas, business, app, and software landing page page that is based on Tailwind. It comes with high-quality design and everything you need"
                 date="06, September 2021"
                 image="ehab.png"
+                client="Ehab Hafez"
+                industry="Interior Design"
+                location="Toronoto, CA"
+                focus="Interior Design &amp; Home Improvements"
+                overview="Ehab Hafez an interior designer based in Toronoto Canada needed a website to act as a funnerl to capture new leads."
+                challenges="Ehab Hafez is new to the Toronoto market and does not have a brand or business identity yet."
+                our_solution="We provided Ehab with a custom Logo, web design and development using WordPress. This option allows Ehab more control over modifying and updating the website content. Upload his new designs, images, and create new posts to promote online."
+                results="Ehab was able within a very short time to start getting leads online through the website."
+                dynamicResults={[
+                  "40% increase in website traffic",
+                  "20% boost in limousine bookings within 3 months",
+                  "Top rankings for 'wedding limousine services Denver NC'",
+                ]}
+                conclusion="Ehab was able to save time on developing the brand identiy, building a new website, setup online ads for his website to generate traffic, and post on social media asking for support."
               />
             </SwiperSlide>
             <SwiperSlide>
               <PortfolioCard
-                subtitle="WordPress Theme"
-                title="JL Automotive"
-                category="Auto Repair Shop"
-                details="JL Automotive is a auto mechanic repair shop based in Charlotte NC and has a team of highly skilled certified mechanics that can repair any type of car."
-                date="06, September 2021"
+                subtitle="React/Node"
+                title="JL Auto Repair - Accelerating Growth for an Auto Repair Shop"
+                category="Auto Repair"
+                details="JL Auto Repair, owned by Jose Lopez, is a full-service auto repair shop based in Charlotte, NC, focused on providing reliable and affordable services to local customers."
+                date="20, November 2021"
                 image="jl-auto.png"
+                client="JL Auto Repair"
+                industry="Automotive Services"
+                location="Charlotte, NC"
+                focus="Vehicle Maintenance, Engine Repairs, Brake Services, Tire Replacement"
+                overview="JL Auto Repair, a local shop owned by Jose Lopez in Charlotte, NC, wanted to attract more customers by increasing their online visibility. They sought a modern, mobile-friendly website that would make it easy for customers to book services and learn more about their offerings."
+                challenges="The auto repair market in Charlotte is highly competitive. JL Auto Repair needed to stand out from larger, well-established shops while providing a customer-friendly experience to build trust and loyalty."
+                our_solution="Blooming Brands built a sleek, mobile-responsive website optimized for search engines, highlighting JL Auto Repair’s services and unique value proposition. We created targeted Google Ads campaigns to drive local traffic and implemented a review management system to boost the shop’s reputation through positive customer feedback."
+                results="After launching the new site, JL Auto Repair saw a 40% increase in service bookings within three months. The SEO and Google Ads strategy helped them secure a top spot in local search results, bringing in new customers and improving customer engagement."
+                dynamicResults={[
+                  "46% increase in website traffic",
+                  "24% boost in limousine bookings within 3 months",
+                  "Top rankings for 'wedding limousine services Denver NC'",
+                ]}
+                conclusion="By leveraging a combination of web design, local SEO, and paid ads, Blooming Brands helped JL Auto Repair thrive in a competitive market, enhancing their online presence and driving significant growth in service bookings."
               />
             </SwiperSlide>
           </Swiper>
-          <div className="absolute w-1/2 flex flex-row gap-2 items-center justify-between bottom-0 pr-40 z-40">
+          <div className="absolute w-1/2 flex flex-row gap-2 items-center justify-between -mt-[1%] px-12 z-40">
             <div className="prev-arrow" onClick={handlePrev}>
               <button className="text-body-color dark:text-dark-6 hover:text-primary flex items-center justify-center text-sm font-medium transition-all">
                 <span className="mr-3">
@@ -128,41 +296,3 @@ const Portfolio: React.FC<{}> = () => {
 };
 
 export default Portfolio;
-
-const PortfolioCard = ({
-  subtitle,
-  title,
-  category,
-  details,
-  date,
-  image,
-}: any) => {
-  return (
-    <div className="flex flex-row">
-      <div className="flex flex-col w-1/2 h-full justify-center items-start">
-        <span className="bg-sky-600 mb-5 inline-block py-[6px] px-4 text-sm font-medium text-white">
-          {subtitle}
-        </span>
-        <h2 className="text-[#090E34] dark:text-white mb-6 text-2xl  font-bold sm:text-[35px]">
-          {title}
-        </h2>
-        <h5 className="text-sky-600 dark:text-white mb-6 text-lg font-medium">
-          {category}
-        </h5>
-        <p className="text-black dark:text-dark-6 mb-6 text-base w-[80%]">
-          {details}
-        </p>
-        <span className="text-sky-600 dark:text-white text-sm font-medium">
-          {date}
-        </span>
-      </div>
-      <div className="flex flex-col w-1/2 h-[60vh] justify-center items-center">
-        <div className="w-full h-full">
-          <div className="">
-            <img src={image} alt="image" className="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};

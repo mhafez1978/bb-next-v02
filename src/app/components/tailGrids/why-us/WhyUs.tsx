@@ -6,19 +6,21 @@ const WhyUs = () => {
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-[70px]">
+            <div className="mx-auto mb-[60px] max-w-[68vw] text-center lg:mb-[70px]">
               <span className="mb-2 block text-lg font-semibold text-primary">
-                How do we do it ?
+                Our Core Strategy
               </span>
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                Business Essentials
+              <h2 className="mb-8 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                Project Blueprint
               </h2>
               <p className="text-base text-body-color dark:text-dark-6">
-                Blooming Brands team gets to know your business, products,
-                services, and ideal customers. Then our experts will create a
-                data driven full stack web funnel that drives traffic to your
-                website to contact you about your offering. its up to you at
-                that point to convert this into a customer.
+                At Blooming Brands, we take the time to understand your
+                business, products, services, and target audience. Our team of
+                experts then builds a data-driven, full-stack web funnel
+                designed to attract high-quality traffic to your website,
+                ensuring potential customers can easily reach you. All
+                that&apos;s left is for you to turn those leads into actualized
+                customers.
               </p>
             </div>
           </div>
@@ -27,7 +29,7 @@ const WhyUs = () => {
         <div className="-mx-4 flex flex-wrap justify-center">
           <ServiceCard
             title="Dedicated project manager"
-            details="With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            details="Every project is assigned a dedicated project manager who ensures your needs are met from start to finish. With personalized attention, we help you stay organized and on track, so you can focus on your business while we handle the details."
             icon={
               <svg
                 width="42"
@@ -56,8 +58,8 @@ const WhyUs = () => {
             }
           />
           <ServiceCard
-            title="Organized tasks"
-            details="With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            title="Streamlined Task Management"
+            details="We prioritize tasks efficiently, ensuring that every aspect of your website and marketing strategy is optimized. From content creation to design, each task is handled professionally, keeping everything running smoothly and on schedule."
             icon={
               <svg
                 width="43"
@@ -74,8 +76,8 @@ const WhyUs = () => {
             }
           />
           <ServiceCard
-            title="Easy feedback sharing"
-            details="With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            title="Continous Feedback &amp; Collaboration"
+            details="At Blooming Brands, we value your input. Our streamlined feedback process allows you to share your thoughts easily, making collaboration simple and ensuring your vision is reflected in the final product."
             icon={
               <svg
                 width="42"
@@ -104,8 +106,8 @@ const WhyUs = () => {
             }
           />
           <ServiceCard
-            title="Never miss deadline"
-            details="With lots of unique blocks, you can easily build a page without coding. Build your next landing page."
+            title="Always On Time, Never Miss a Deadline"
+            details="Our team works diligently to meet every deadline without sacrificing quality. We stay focused and organized, ensuring your website and marketing campaigns are ready to launch on time, every time."
             icon={
               <svg
                 width="43"
