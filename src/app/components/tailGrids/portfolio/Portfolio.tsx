@@ -8,7 +8,7 @@ import SwiperCore, { Swiper as SwiperInstance } from "swiper";
 // Optional: Initialize Swiper modules if needed
 // SwiperCore.use([Navigation, Pagination]);
 
-export function Action_List() {
+export function ActionList() {
   return (
     <>
       <ul className="list-disc text-sm pl-4">
@@ -96,7 +96,7 @@ const PortfolioCard = ({
           <br />
           {our_solution}
         </p>
-        {Action_List()}
+        <ActionList />
         {/* <p className="text-sm text-gray-600 mt-2">
           <span className="font-black">Results:</span>
           <br /> {results}
