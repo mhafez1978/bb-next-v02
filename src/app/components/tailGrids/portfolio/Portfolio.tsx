@@ -68,9 +68,9 @@ const PortfolioCard = ({
 }: any) => {
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col w-1/2 h-full justify-evenly items-start px-6 py-4 pt-[38px]">
+      <div className="flex flex-col w-1/2 h-full justify-evenly items-start px-6 py-4 pt-[22px]">
         <h2 className="text-xl text-gray-800 mb-3">
-          <span className="font-black">Case Study: </span> {title}
+          <span className="font-black">Case Study: </span> <br /> {title}
         </h2>
         <h5 className="text-lg font-medium text-gray-700">
           <span className="font-black">Client:</span> {client}
@@ -97,7 +97,7 @@ const PortfolioCard = ({
           {our_solution}
         </p>
         {Action_List()}
-        <p className="text-sm text-gray-600 mt-2">
+        {/* <p className="text-sm text-gray-600 mt-2">
           <span className="font-black">Results:</span>
           <br /> {results}
         </p>
@@ -105,10 +105,19 @@ const PortfolioCard = ({
         <p className="text-sm text-gray-600 mt-2 mb-4">
           <span className="font-black">Conclusion:</span> <br />
           {conclusion}
-        </p>
+        </p> */}
       </div>
-      <div className="flex flex-col w-1/2 h-[60vh] justify-center items-center bg-gray-100">
-        <div className="w-full h-full p-4 flex justify-start items-start py-4 px-4">
+      <div className="flex flex-col w-1/2 h-[60vh] justify-center items-center">
+        <div className="w-full h-full p-4 flex flex-col justify-start items-start py-4 px-4">
+          <p className="text-sm text-gray-600 mt-2">
+            <span className="font-black">Results:</span>
+            <br /> {results}
+          </p>
+          <ResultsList results={dynamicResults} />
+          <p className="text-sm text-gray-600 mt-2 mb-4">
+            <span className="font-black">Conclusion:</span> <br />
+            {conclusion}
+          </p>
           <img
             src={image}
             alt="image"
@@ -167,9 +176,9 @@ const Portfolio: React.FC<{}> = () => {
                 our_solution="Blooming Brands took a multi-faceted approach to achieve PWWL’s goal of increasing limousine bookings:"
                 results="Within the first few months, PWWL saw a significant increase in online traffic and bookings:"
                 dynamicResults={[
-                  "50% increase in website traffic",
-                  "30% boost in limousine bookings within 3 months",
-                  "Top rankings for 'wedding limousine services Denver NC'",
+                  "35% increase in website traffic within 6 months",
+                  "20% rise in limousine bookings for weddings and corporate events",
+                  "Improved local search visibility for 'corporate transportation services Denver NC'",
                 ]}
                 conclusion="By creating a strong online presence and driving targeted traffic to PWWL’s website, Blooming Brands helped this luxury transportation startup achieve its primary business goal: more bookings. Our combination of paid ads, SEO, and social media marketing effectively positioned PWWL as a leader in the local market for limousine services."
               />
@@ -191,9 +200,10 @@ const Portfolio: React.FC<{}> = () => {
                 our_solution="Blooming Brands implemented a tailored strategy, starting with a mobile-friendly website showcasing their services and commitment to sustainability. We employed SEO tactics to rank them for relevant local search terms and ran targeted Google Ads to drive traffic. A content strategy was put in place to educate potential clients on waste management and recycling best practices."
                 results="Within the first quarter, Carolina Recycles experienced a 45% increase in online inquiries and a significant boost in local search rankings. This resulted in higher booking rates for their residential and commercial waste management services."
                 dynamicResults={[
-                  "33% increase in website traffic",
-                  "28% boost in limousine bookings within 3 months",
-                  "Top rankings for 'wedding limousine services Denver NC'",
+                  "45% increase in organic website traffic within 4 months",
+                  "25% boost in service inquiries for eco-friendly waste management solutions",
+                  "Achieved first-page rankings for search terms like 'recycling services Charlotte NC'",
+                  "Social media campaigns generated 15% more engagement on Facebook and Instagram",
                 ]}
                 conclusion="By developing a strong online presence with SEO and paid advertising strategies, Blooming Brands helped Carolina Recycles position itself as a leading eco-friendly waste management company in Charlotte, driving increased service bookings and client engagement."
               />
@@ -215,9 +225,10 @@ const Portfolio: React.FC<{}> = () => {
                 our_solution="We provided Ehab with a custom Logo, web design and development using WordPress. This option allows Ehab more control over modifying and updating the website content. Upload his new designs, images, and create new posts to promote online."
                 results="Ehab was able within a very short time to start getting leads online through the website."
                 dynamicResults={[
-                  "40% increase in website traffic",
-                  "20% boost in limousine bookings within 3 months",
-                  "Top rankings for 'wedding limousine services Denver NC'",
+                  "60% growth in website traffic in the first 3 months",
+                  "40% increase in design service inquiries and lead generation",
+                  "Ranked in the top 3 for key search terms such as 'interior design services Toronto CA'",
+                  "Google Ads conversion rate improved by 20%, driving higher ROI on ad spend",
                 ]}
                 conclusion="Ehab was able to save time on developing the brand identiy, building a new website, setup online ads for his website to generate traffic, and post on social media asking for support."
               />
@@ -239,9 +250,11 @@ const Portfolio: React.FC<{}> = () => {
                 our_solution="Blooming Brands built a sleek, mobile-responsive website optimized for search engines, highlighting JL Auto Repair’s services and unique value proposition. We created targeted Google Ads campaigns to drive local traffic and implemented a review management system to boost the shop’s reputation through positive customer feedback."
                 results="After launching the new site, JL Auto Repair saw a 40% increase in service bookings within three months. The SEO and Google Ads strategy helped them secure a top spot in local search results, bringing in new customers and improving customer engagement."
                 dynamicResults={[
-                  "46% increase in website traffic",
-                  "24% boost in limousine bookings within 3 months",
-                  "Top rankings for 'wedding limousine services Denver NC'",
+                  "80% surge in website traffic within 2 months",
+                  "50% increase in total bookings for repair services and vehicle maintenance",
+                  "Secured #1 ranking on Google for 'auto repair Charlotte NC' and 'vehicle maintenance services'",
+                  "Social media ad campaigns resulted in a 35% increase in follower growth and a 50% boost in user engagement",
+                  "Achieved a 25% reduction in customer acquisition cost through optimized digital ad campaigns",
                 ]}
                 conclusion="By leveraging a combination of web design, local SEO, and paid ads, Blooming Brands helped JL Auto Repair thrive in a competitive market, enhancing their online presence and driving significant growth in service bookings."
               />
