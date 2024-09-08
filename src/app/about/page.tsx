@@ -8,6 +8,7 @@ const AboutPage: React.FC<{}> = () => {
       <div className="container mx-auto">
         <Breadcrumbs />
         <Marketing />
+        <p className="text-center hidden">blooming Brands LLC</p>
       </div>
     </section>
   );

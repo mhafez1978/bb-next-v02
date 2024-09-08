@@ -1,4 +1,4 @@
-// File: /Users/mhafez/Desktop/full stack repo/bb-next-v02/src/app/about/page.tsx
+// File: /Users/mhafez/Desktop/full stack repo/bb-next-v02-1/src/app/about/page.tsx
 import * as entry from '../../../../src/app/about/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

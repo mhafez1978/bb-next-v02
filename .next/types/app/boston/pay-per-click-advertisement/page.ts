@@ -1,4 +1,4 @@
-// File: /Users/mhafez/Desktop/full stack repo/bb-next-v02/src/app/boston/pay-per-click-advertisement/page.tsx
+// File: /Users/mhafez/Desktop/full stack repo/bb-next-v02-1/src/app/boston/pay-per-click-advertisement/page.tsx
 import * as entry from '../../../../../src/app/boston/pay-per-click-advertisement/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
