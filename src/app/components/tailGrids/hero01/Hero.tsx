@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FaAnglesRight } from "react-icons/fa6";
 import { Anton } from "@next/font/google";
+import Modal from "@/app/components/tailGrids/modal/Modal";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -28,10 +29,8 @@ const Hero = () => {
                 industry.
               </p>
 
-              <div className="w-full flex justify-start items-center lg:flex-row lg:gap-6 sm:flex-col sm:gap-y-8">
-                <button className="w-[240px] bg-sky-700 text-white outline px-12 py-4 rounded-md hover:bg-emerald-500 hover:text-white">
-                  Get Started Today
-                </button>
+              <div className="w-full flex flex-col justify-start items-center lg:flex-row lg:gap-6 sm:gap-y-8">
+                <Modal />
                 <Link
                   href="/services"
                   className="py-4 rounded-md text-center text-sky-600 font-medium"

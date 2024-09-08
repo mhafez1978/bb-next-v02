@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ServiceCard = ({ link, image, button, title, details }: any) => {
@@ -67,47 +68,47 @@ const Services = () => {
         <div className="w-full flex flex-col gap-8">
           <div className="w-full flex flex-row justify-center items-center gap-2">
             <ServiceCard
-              link="/#"
+              link="/boston/web-design-and-development"
               image="https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg"
               title="Web Design & Development"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              details="At Blooming Brands, we craft SEO-optimized, user-friendly websites with a customer-first approach to drive your business success."
               button="View Details"
             />
             <ServiceCard
-              link="/#"
+              link="/boston/search-engine-optimization"
               image="https://img.freepik.com/free-photo/map-lying-wooden-table_53876-65112.jpg"
               title="Search Engine Optimization (SEO)"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              details="We optimize your website for search engines to boost visibility, attract targeted traffic, and increase revenue."
               button="View Details"
             />
             <ServiceCard
-              link="/#"
-              image="https://img.freepik.com/free-photo/design-software-resize-icon-concept_53876-132194.jpg"
-              title="Digital Marketing Strategy"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              link="/boston/online-marketing"
+              image="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/10/Digital-Marketing.jpg"
+              title="Online Marketing"
+              details="Get data-driven, customized online marketing strategies that drive traffic, build brand loyalty, and increase sales."
               button="View Details"
             />
           </div>
           <div className="w-full flex flex-row justify-center items-center gap-2">
             <ServiceCard
-              link="/#"
-              image="https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg"
+              link="/boston/content-creation-and-marketing"
+              image="https://www.benchmarkemail.com/wp-content/uploads/2023/01/ContentCreation-scaled-e.jpg"
               title="Content Creation and Marketing"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              details="Our team will create engaging, high-quality content that builds brand authority, drives traffic, and boosts conversions."
               button="View Details"
             />
             <ServiceCard
-              link="/#"
-              image="https://img.freepik.com/free-photo/map-lying-wooden-table_53876-65112.jpg"
+              link="/boston/pay-per-click-advertisement"
+              image="https://www.spinxdigital.com/app/uploads/2016/09/Identity-Based-PPC-Marketing-What-It-Is-and-Why-It-is-Important-1.jpg"
               title="Pay-Per-Click (PPC) Advertising"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              details="Experience our targeted PPC campaigns that drive traffic, increase conversions, and maximize your advertising ROI."
               button="View Details"
             />
             <ServiceCard
-              link="/#"
-              image="https://img.freepik.com/free-photo/design-software-resize-icon-concept_53876-132194.jpg"
+              link="/boston/social-media-management-service"
+              image="https://tlc-texas.com/wp-content/uploads/2023/08/social-media-tips-blog-header-no-logo.png"
               title="Social Media Management"
-              details="Lorem ipsum is simply dummy text of the printing typesetting lorem ipsum been dummy text."
+              details="Let's manage and grow your social media presence, building engagement, driving traffic, and increasing brand visibility."
               button="View Details"
             />
           </div>

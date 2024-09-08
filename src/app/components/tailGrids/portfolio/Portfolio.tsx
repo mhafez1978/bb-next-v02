@@ -91,11 +91,12 @@ const PortfolioCard = ({
         <p className="text-sm text-gray-600 mt-2">
           <span className="font-black">Challenges:</span> <br /> {challenges}
         </p>
-        <p className="text-sm text-gray-600 mt-2 w-[80%]">
+        <p className="text-sm text-gray-600 mt-2 w-[80%] mb-4">
           <span className="font-black">Our Solution:</span>
           <br />
           {our_solution}
         </p>
+
         <ActionList />
         {/* <p className="text-sm text-gray-600 mt-2">
           <span className="font-black">Results:</span>
@@ -151,7 +152,13 @@ const Portfolio: React.FC<{}> = () => {
         id="portfolio"
         className="flex flex-col justify-center items-center w-[100vw] min-h-[100vh] overflow-hidden py-24"
       >
-        <div className="relative container  mx-auto">
+        <div className="relative container mx-auto">
+          <h2 className="text-center text-4xl mb-4 font-black">
+            Some of Our Happy Clients
+          </h2>
+          <h5 className="text-center text-xl font-semibold mb-8">
+            Project Portfolio
+          </h5>
           <Swiper
             slidesPerView={1}
             onSwiper={(swiper) => {
